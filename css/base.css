@@ -1,0 +1,10 @@
+body
+{
+  background: #333;
+  color: white;
+}
+
+a:link, a:visited, a:hover, a:active
+{
+  color: white;
+}
