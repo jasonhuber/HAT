@@ -10,21 +10,27 @@
         $('#simple-menu').sidr();
         $('#starttimer').bind('click',
           function(){
-              starttimer($('#txtNumSec').val())}
+              //debugger;
+              starttimer($('#txtNumSec').val(),$('#txtNumArrows').val(), "#content");
+              }
           );
-
       });
-
     </script>
+    <style>
+      #content
+      {color:black;}
+    </style>
   </head>
   <body>
     <div id="sidr">
       <!-- Your content -->
       # of seconds:
-      <input type="text" name="txtNumSec" id="txtNumSec" />
+      <input type="text" name="txtNumSec" id="txtNumSec" value="40" /><br />
+      # of arrows:
+      <input type="text" name="txtNumArrows" id="txtNumArrows" value="3" /><br />
     </div>
     <a href="#" id="simple-menu">>></a><br />
-    <a href="#" id="starttimer">>></a>
-    <div id="content" />
+    <a href="#" id="starttimer">Go!</a>
+    <div id="content">0:00</div>
   </body>
 </html>
