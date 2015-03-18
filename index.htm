@@ -9,28 +9,34 @@
     <script>
       $(document).ready(function() {
         $('#simple-menu').sidr();
-        $('#starttimer').bind('click',
-          function(){
-              //debugger;
-              starttimer($('#txtNumSec').val(),$('#txtNumArrows').val(), "#content");
-              }
-          );
+        $('#starttimer').bind('click',function(){starttimer($('#txtNumSec').val(),$('#txtNumArrows').val(), "#content");});
+        $('#settwominutes').bind('click',function(){starttimer(120,1, "#content");});
+        $('#setfourminutes').bind('click',function(){starttimer(240,1, "#content");});
+        $('#settwentyshootoff').bind('click',function(){starttimer(20,1, "#content");});
       });
     </script>
     <style>
       #content
-      {font-size:200pt;
-      text-align:center;
-      verticle-align:middle;}
+      {
+        font-size:200pt;
+        text-align:center;
+        verticle-align:middle;
+      }
     </style>
   </head>
   <body>
     <div id="sidr">
       <!-- Your content -->
-      # of seconds:
+      &nbsp;# of seconds:
       <input type="text" name="txtNumSec" id="txtNumSec" value="40" /><br />
-      # of arrows:
+      &nbsp;# of arrows:
       <input type="text" name="txtNumArrows" id="txtNumArrows" value="3" /><br />
+        <ul>
+          <li><a href="#" id="settwominutes">2:00</a></li>
+          <li><a href="#" id="setfourminutes">4:00</a></li>
+          <li><a href="#" id="settwentyshootoff">:20 - shootoff</a></li>
+        </ul>
+      <input type="checkbox" name="chk10Seconds" id="chk10seconds" checked /> include 10 seconds?
     </div>
     <a href="#" id="simple-menu">>></a><br />
     <a href="#" id="starttimer">Go!</a>
