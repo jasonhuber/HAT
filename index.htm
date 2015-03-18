@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Huber Archery Timer</title>
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/jquery.sidr.min.js"></script>
+    <link rel="stylesheet" href="js/stylesheets/jquery.sidr.dark.css">
+    <script>
+      $(document).ready(function() {
+        $('#simple-menu').sidr();
+        $('#starttimer').bind('click',
+          function(){
+              starttimer($('#txtNumSec').val())}
+          );
+
+      });
+
+    </script>
+  </head>
+  <body>
+    <div id="sidr">
+      <!-- Your content -->
+      # of seconds:
+      <input type="text" name="txtNumSec" id="txtNumSec" />
+    </div>
+    <a href="#" id="simple-menu">>></a><br />
+    <a href="#" id="starttimer">>></a>
+    <div id="content" />
+  </body>
+</html>
