@@ -18,9 +18,29 @@
     <style>
       #content
       {
-        font-size:200pt;
+        font-size:250pt;
         text-align:center;
         verticle-align:middle;
+      }
+      #wrapper
+      {
+        width:100%;
+        height:100%;
+      }
+      #abcdline
+      {
+          float:left;
+      }
+      #end
+      {
+        float:right;
+      }
+      #abcdline, #end
+      {
+        font-size:150pt;
+        text-align:center;
+        verticle-align:middle;
+        color:red;
       }
     </style>
   </head>
@@ -40,6 +60,11 @@
     </div>
     <a href="#" id="simple-menu">>></a><br />
     <a href="#" id="starttimer">Go!</a>
-    <div id="content">0:00</div>
+    <div id="wrapper">
+      <div id="content">0:00</div><br />
+      <div id="abcdline">A/B</div>
+      <div id="end">3</div>
+
+    </div>
   </body>
 </html>
